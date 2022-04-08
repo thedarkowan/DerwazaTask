@@ -1,0 +1,107 @@
+<div class="page">
+    <div class="form">
+      <div class="buttons">
+        <div id="btn"></div>
+        <button type="button" class="btns" (click)="login()">Log In</button>
+        <button type="button" class="btns" (click)="signup()">Sign Up</button>
+      </div>
+  
+      <form [formGroup]="loginForm" id="login" class="input-grp" method="POST">
+        <input
+          id="loginemail"
+          type="text"
+          class="input-field"
+          placeholder="Email"
+          required
+          formControlName="loginEmail"
+        />
+        <input
+          id="loginpass"
+          type="password"
+          class="input-field"
+          placeholder="Password"
+          required
+          formControlName="loginPassword"
+        />
+        <div>
+          <input type="checkbox" class="check-box" /><span>Remember Me</span>
+        </div>
+        <button
+          id="loginB"
+          type="submit"
+          class="submit-btn"
+          (click)="onSubmitLoginForm()"
+        >
+          Log In
+        </button>
+      </form>
+  
+      <form [formGroup]="signUpForm" id="signup" class="input-grp" method="POST">
+        <input
+          id="fn"
+          type="text"
+          class="input-field"
+          placeholder="First Name"
+          required
+          formControlName="firstName"
+        />
+        <input
+          id="ln"
+          type="text"
+          class="input-field"
+          placeholder="Last Name"
+          required
+          formControlName="lastName"
+        />
+        <input
+          id="signupemail"
+          type="text"
+          class="input-field"
+          placeholder="Email"
+          required
+          formControlName="signupEmail"
+        />
+        <input
+          id="signuppass"
+          type="password"
+          class="input-field"
+          placeholder="Password"
+          required
+          formControlName="password"
+        />
+        <input
+          id="passc"
+          type="password"
+          class="input-field"
+          placeholder="Password Confirmation"
+          required
+          formControlName="passwordCheck"
+        />
+        <button
+          (click)="onSubmitSignupForm()"
+          id="signupB"
+          type="submit"
+          class="submit-btn"
+        >
+          Sign Up
+        </button>
+      </form>
+    </div>
+  </div>
+  <script>
+    var x = document.getElementById("login");
+    var y = document.getElementById("signup");
+    var z = document.getElementById("btn");
+  
+    function signup() {
+      x.style.left = "-600px";
+      y.style.left = "50px";
+      z.style.left = "110px";
+    }
+    function login() {
+      x.style.left = "60px";
+      y.style.left = "600px";
+      z.style.left = "0";
+    }
+  </script>
+  

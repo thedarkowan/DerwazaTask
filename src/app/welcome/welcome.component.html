@@ -1,0 +1,12 @@
+<div class="page">
+    <div *ngIf="currentUser" class="wform">
+      <h1>
+        <header id="welcomeMessage">
+          welcome {{ currentUser }} you're logged in with {{ currentEmail }}
+        </header>
+      </h1>
+      <button (click)="logout()" id="logoutb" type="submit" class="submit-btn">
+        Log Out
+      </button>
+    </div>
+  </div>
